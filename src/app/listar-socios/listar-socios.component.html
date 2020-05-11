@@ -1,0 +1,39 @@
+<p>listar-socios works!</p>
+
+<div class="card border-dark mb-3">
+    <div class="card-header">Socios</div>
+    <form (ngSubmit)='ListaSociosporNombre()'>
+        <div class="form-group">
+            <label for="nom">Nombre</label>
+            <input type="text" name="nom" class="form-control" id="nom" [(ngModel)]='nom'>
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-success">Filtrar</button>
+        </div>
+    </form>
+    <div class="card-body text-dark">
+        <h5 class="card-title">Listado de Socios</h5>
+        <table class="table table-dark">
+            <thead>
+                <tr>
+                    <th>id Socio</th>
+                    <th>DNI</th>
+                    <th>Nombre</th>
+                    <th>E-mail</th>
+                    <th>Direccion</th>
+                    <th>Numero de Dependientes</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor = "let s of socios">
+                    <th>{{s.idSocio}}</th>
+                    <th>{{s.dni}}</th>
+                    <th>{{s.nombre}}</th>
+                    <th>{{s.email}}</th>
+                    <th>{{s.direccion}}</th>
+                    <th>{{s.numeroDependientes}}</th>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

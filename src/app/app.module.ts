@@ -4,13 +4,22 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
+import { HttpClientModule } from "@angular/common/http";
+import { FormsModule } from "@angular/forms";
+import { RegistrarSocioComponent } from './registrar-socio/registrar-socio.component';
+import { ListarSociosComponent } from './listar-socios/listar-socios.component';
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    RegistrarSocioComponent,
+    ListarSociosComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

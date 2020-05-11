@@ -1,0 +1,31 @@
+<p>registrar-socio works!</p>
+
+<h3>Registro de Socio</h3>
+
+<div>
+    <form (ngSubmit)='registrarSocio()'>
+        <div class="form-group">
+            <label for="DNI">DNI</label>
+            <input type="text" name="DNI" class="form-control" id="DNI" [(ngModel)]='socio.dni'>
+        </div>
+        <div class="form-group">
+            <label for="nombre">Nombre</label>
+            <input type="text" name="nombre" class="form-control" id="nombre" [(ngModel)]='socio.nombre'>
+        </div>
+        <div class="form-group">
+            <label for="email">E-mail</label>
+            <input type="email" name="email" class="form-control" id="email" [(ngModel)]='socio.email'>
+        </div>
+        <div class="form-group">
+            <label for="direccion">Direccion</label>
+            <input type="text" name="direccion" class="form-control" id="direccion" [(ngModel)]='socio.direccion'>
+        </div>
+        <div class="form-group">
+            <label for="numeroDependientes">Numero de Dependientes</label>
+            <input type="text" name="numeroDependientes" class="form-control" id="numeroDependientes" [(ngModel)]='socio.numeroDependientes'>
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-success">Registrar</button>
+        </div>
+    </form>
+</div>
